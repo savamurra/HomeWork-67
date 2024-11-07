@@ -8,7 +8,7 @@ interface KeyboardState {
 
 const initialState: KeyboardState = {
     value: '',
-    background: 'white',
+    background: '#eee',
     message: '',
 };
 
