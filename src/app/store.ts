@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
-import { keyboardReducer} from "../containers/Keyboard/keyboardSlice.ts";
+import {keyboardReducer} from "../containers/Keyboard/keyboardSlice.ts";
+import {calculatorReducer} from "../containers/Calculator/calculatorSlice.ts";
 
 export const store = configureStore({
     reducer: {
-        keyboard: keyboardReducer
+        keyboard: keyboardReducer,
+        calculator: calculatorReducer,
     }
 });
 
