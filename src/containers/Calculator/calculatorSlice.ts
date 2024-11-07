@@ -20,7 +20,7 @@ export const calculatorSlice = createSlice({
         },
 
         checkResult: (state) => {
-            state.result = eval(state.value.toString());
+            state.result = eval(state.value);
         },
 
         clearResult: (state) => {
@@ -34,4 +34,4 @@ export const calculatorSlice = createSlice({
     }
 });
 export const calculatorReducer = calculatorSlice.reducer;
-export const { addNumber, checkResult ,clearResult,removeNumber} = calculatorSlice.actions;
+export const {addNumber, checkResult, clearResult, removeNumber} = calculatorSlice.actions;
