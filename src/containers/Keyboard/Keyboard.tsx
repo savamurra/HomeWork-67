@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../app/store.ts";
-import {addPassword, checkCorrectPassword, removePassword} from "./keyboardSlice.ts";
+import {addPassword, checkCorrectPassword, removePassword, restartPassword} from "./keyboardSlice.ts";
 
 
 const Keyboard = () => {
@@ -23,6 +23,7 @@ const Keyboard = () => {
                 <button onClick={() => dispatch(addPassword(0))}>{0}</button>
                 <button onClick={() => dispatch(checkCorrectPassword())}>{'E'}</button>
             </div>
+            <button style={{margin: '10px auto 0'}} onClick={() => dispatch(restartPassword())}>{'Restart'}</button>
         </div>
     );
 };

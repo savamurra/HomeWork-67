@@ -36,10 +36,16 @@ export const keyboardSlice = createSlice({
                 state.message = 'Access Denied';
                 state.background = 'red';
             }
+        },
+
+        restartPassword: (state) => {
+            state.background = '#eee';
+            state.message = '';
+            state.value = '';
         }
     }
 });
 
 export const keyboardReducer = keyboardSlice.reducer;
 
-export const { addPassword, removePassword , checkCorrectPassword} = keyboardSlice.actions;
+export const { addPassword, removePassword , checkCorrectPassword,restartPassword} = keyboardSlice.actions;
